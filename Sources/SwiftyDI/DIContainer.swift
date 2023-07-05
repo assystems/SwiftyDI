@@ -15,7 +15,7 @@ public class DIContainer {
     
     @resultBuilder
     public struct DependencyBuilder {
-        static func buildBlock(_ dependencies: Dependency...) -> [Dependency] { dependencies }
+        public static func buildBlock(_ dependencies: Dependency...) -> [Dependency] { dependencies }
     }
 
     public convenience init(@DependencyBuilder _ dependencies: () -> [Dependency]) {
